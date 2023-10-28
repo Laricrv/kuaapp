@@ -1,0 +1,87 @@
+{% extends"base.html" %}
+{% block title %}Agregar curso{% endblock %}
+
+{% block content %}
+
+<!---->
+<div class="relative isolate -z-10 overflow-hidden bg-gradient-to-b from-indigo-100/20 pt-14">
+  <div class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:-mr-80 lg:-mr-96" aria-hidden="true"></div>
+  <div class="mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
+      <h1 class="max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto">Formulario para subir los cursos que desees.</h1>
+      <div class="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
+      </div>
+      <div class="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
+        
+      </div>
+      <img src="static\looking.png" alt="" class="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36">
+    </div>
+  </div>
+  <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"></div>
+</div>
+<!---->
+
+
+
+        
+
+            <div class="flex justify-center items-center h-screen flex-col space-y-20">
+              <!-- <div class="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-3 text-center"> -->
+                <!-- <div class="px-4">
+                  <h2 class="text-base font-semibold leading-7 text-gray-900">Cargar curso</h2>
+                  <p class="mt-1 text-sm leading-6 text-gray-600">This information will be displayed publicly so be careful what you share.</p>
+                </div> -->
+            
+                <form action="{{ url_for('agregar_curso_form', usuario_id=usuario.id) }}" method="post" class=" bg-white w-96 text-center justify-center items-center h-screen">
+                  <div class="px-4 py-6 sm:p-8">
+                    <div class="grid max-w-2xl grid-cols-1 ">
+                      
+
+                      <div class="sm:col-span-4">
+                        <label for="website" class="block text-sm font-medium leading-6 text-gray-900">Link del Curso</label>
+                        <div class="mt-2">
+                          <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                            <input type="url" name="video_link" id="video_link" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="Coloque el link del video">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="sm:col-span-4">
+                        <label for="website" class="block text-sm font-medium leading-6 text-gray-900">Nombre del Curso</label>
+                        <div class="mt-2">
+                          <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                            <input type="text" name="tema" id="tema" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="Ejemplos = Matematica, Fisica, Algebra, etc">
+                          </div>
+                        </div>
+                      </div>
+            
+                      <div class="col-span-full">
+                        <label for="about" class="block text-sm font-medium leading-6 text-gray-900">Descripcion del Curso</label>
+                        <div class="mt-2">
+                          <input type="text" id="descripcion" name="descripcion" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Habla de manera breve sobre el curso..."></textarea>
+                        </div>
+                      </div>
+            
+                      <!-- <div class="col-span-full">
+                        <label for="about" class="block text-sm font-medium leading-6 text-gray-900">Presentacion del Instructor del curso</label>
+                        <div class="mt-2">
+                          <textarea id="about" name="about" rows="3" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                        </div>
+                      </div> -->
+                    </div>
+                  </div>
+            
+                  <div class="flex items-center justify-end gap-x-6 border-t border-gray-900/10 px-4 py-4 sm:px-8">
+                    <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancelar</button>
+                    <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Cargar</button>
+                  </div>
+            
+                </form>
+              <!-- </div> -->
+            </div>
+    
+  
+  
+
+
+{% endblock %}

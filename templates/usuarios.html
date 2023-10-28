@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+</head>
+<body>
+    <h1>Usuarios</h1>
+    <ul>
+        {%for usuario in usuarios%}
+        <form action="/eliminar/{{ usuario.id}} " method="post">
+            <l1>Nombre:{{usuario.nombre}}  {{usuario.apellido}}  Email: {{usuario.email}} Edad: {{usuario.edad}} Contacto:{{usuario.telefono}} Profesion: {{usuario.profesion}} </l1>
+            <a href="{{ url_for('perfil', usuario_id=usuario.id) }}">Perfil</a>
+            <button type="submit" >Eliminar</button>
+        </form>
+        {%endfor%}
+    </ul>
+
+
+    
+</body>
+</html>
